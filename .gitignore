@@ -9,13 +9,30 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*
-/tmp/*
 !/log/.keep
-!/tmp/.keep
+/log/*.log
+/tmp
+.byebug_history
 
+# JS Cruft
 /node_modules
 /yarn-error.log
 
-.byebug_history
+# Ruby Related Cruft
+.ruby-gemset
+.ruby-version
+.rvmrc
+.ruby-gemset
+.ruby-version
+
+# Local Cruft
 .DS_Store
 .env
+
+# Ruby standards
+.rubocop.yml
+
+# asset uploads
+public/system/
+public/uploads/
+public/images/files/
