@@ -6,7 +6,7 @@ default: &default
 development:
   <<: *default
   host: localhost
-  database: recipe-exchange_development
+  database: recipe-exchange_dev
   username: <%= ENV['DB_USER'] %>
   password: <%= ENV['DB_PASSWORD'] %>
 
@@ -18,14 +18,14 @@ test:
   password: <%= ENV['TEST_DB_PASSWORD'] %>
 
 stage:
-  <<: *base
+  <<: *default
   host: <%= ENV['STAGE_HOST'] %>
   database: <%= ENV['STAGE_DB_NAME'] %>
   username: <%= ENV['STAGE_USER'] %>
   password: <%= ENV['STAGE_PASSWORD'] %>
 
 production:
-  <<: *base
+  <<: *default
   host: <%= ENV['DB_HOST'] %>
   database: <%= ENV['DB_NAME'] %>
   username: <%= ENV['DB_USER'] %>
