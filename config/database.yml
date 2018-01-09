@@ -1,17 +1,18 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: localhost
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
+  host: localhost
   database: recipe-exchange_development
   username: <%= ENV['DB_USER'] %>
   password: <%= ENV['DB_PASSWORD'] %>
 
 test:
   <<: *default
+  host: localhost
   database: recipe-exchange_test
   username: <%= ENV['TEST_DB_USER'] %>
   password: <%= ENV['TEST_DB_PASSWORD'] %>
