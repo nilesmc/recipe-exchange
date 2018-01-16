@@ -52,6 +52,7 @@ GEM
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
+    bootstrap_form (2.7.0)
     browser (0.8.0)
     builder (3.2.3)
     capistrano (3.10.1)
@@ -291,9 +292,11 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   bootstrap-sass (~> 3.3.6)
+  bootstrap_form
   capistrano
   capistrano-rails
   capybara (~> 2.13)
+  devise
   fae-rails
   jbuilder (~> 2.5)
   jquery-rails

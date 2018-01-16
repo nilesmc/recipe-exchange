@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :webusers
   namespace :admin do
 
   end

@@ -18,10 +18,18 @@ gem "sprockets-media_query_combiner"
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 
+# Forms
+gem 'bootstrap_form'
+
+# User management
+gem 'devise'
+
 
 # Markdown
 gem "redcarpet"
 gem "yarjuf"
+
+# Other
 gem "settingslogic", "~> 2.0.8"
 
 
