@@ -1,14 +1,9 @@
 Rails.application.routes.draw do
 
-  # devise_for :webusers, controllers: {
-  #       sessions: 'webusers/sessions'
-  #     }
-  as :webuser do
-    get 'login' => 'webusers/sessions#new', as: :new_user_session
-    post 'login' => 'webusers/sessions#create', as: :user_session
-    get 'logout' => 'webusers//sessions#destroy', as: :destroy_user_session
-  end
-  resources :webusers
+  devise_for :webusers, controllers: {
+        sessions: 'webusers/sessions'
+      }
+
 
   namespace :admin do
 

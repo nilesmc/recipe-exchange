@@ -15,14 +15,10 @@ class ApplicationDeviseController < Fae::ApplicationController
   helper_method :custom_devise_controller?
 
   def after_sign_in_path_for(_resource)
-    require "pry"
-    binding.pry
     custom_devise_controller?(['webusers']) ? edit_webuser_registration_path : super
   end
 
   def after_sign_out_path_for(_resource)
-    require "pry"
-    binding.pry
     custom_devise_controller?(['webusers']) ? new_webuser_session_path : super
   end
 
