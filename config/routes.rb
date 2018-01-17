@@ -5,8 +5,8 @@ Rails.application.routes.draw do
         registraions: 'webusers/registrations'
       }
   devise_scope :webuser do
-    get '/webusers/login', to: 'webusers/sessions#new'
-    get '/webusers/signup', to: 'webusers/registrations#new'
+    get '/webusers/login', to: 'webusers/sessions#new', as: 'login'
+    get '/webusers/signup', to: 'webusers/registrations#new', as: 'signup'
   end
 
 

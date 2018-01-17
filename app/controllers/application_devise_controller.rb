@@ -25,11 +25,7 @@ class ApplicationDeviseController < Fae::ApplicationController
   private
 
   def layout_by_resource
-    if custom_devise_controller?
-      "application"
-    else
-      "devise"
-    end
+    custom_devise_controller? ? "application" : "devise"
   end
 
   def custom_devise_controller?(values = ['api', 'webusers'])
