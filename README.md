@@ -44,7 +44,13 @@ see ApplicationDeviseController and devise.rb for more of the changes.
 
 Converted default devise from erb to slim
 
-Layered on some bootsrap goodness
+Layered on some bootstrap goodness
+
+Next up
+
+* add in navigation for login
+* setup testing
+* add in recipes
 
 
 ## Process
