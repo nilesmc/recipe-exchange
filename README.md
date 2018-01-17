@@ -59,3 +59,5 @@ Next up
 * Build a Rails monolith
 * Break it up into a handful of services
 * Use some fun new modern tools in the process
+
+<a target="_blank" href=https://docs.google.com/presentation/d/1OSqUWUj-GW2lj7hXOtooM4lvoerp_OXAFgkVOpWEtPU/edit?usp=sharing>See a Slide show about my Game Plan Here</a>
