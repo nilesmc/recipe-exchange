@@ -1,5 +1,6 @@
 class ApplicationDeviseController < Fae::ApplicationController
   layout :layout_by_resource
+  helper ApplicationHelper
 
   skip_before_action :check_disabled_environment, if: -> { custom_devise_controller? }
   skip_before_action :first_user_redirect, if: -> { custom_devise_controller? }
