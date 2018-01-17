@@ -22,7 +22,8 @@ gem 'turbolinks', '~> 5'
 gem 'bootstrap_form'
 
 # User management
-gem 'devise'
+# Used this version of devise to be compatible w ruby 2.5 and FAE
+gem 'devise', git: 'https://github.com/plataformatec/devise' #, ref: '88e9a85'
 
 
 # Markdown

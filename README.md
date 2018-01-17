@@ -41,6 +41,8 @@ rails generate devise Webser
 rails db:migrate
 ```
 
+Next I had to
+
 ## Process
 
 * Document what I'm doing for a future blog post
