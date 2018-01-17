@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   devise_for :webusers, controllers: {
         sessions: 'webusers/sessions'
       }
+  devise_scope :webuser do
+    get '/webusers/login', to: 'webusers/sessions#new'
+  end
 
 
   namespace :admin do
