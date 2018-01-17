@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
 
   devise_for :webusers, controllers: {
-        sessions: 'webusers/sessions'
+        sessions: 'webusers/sessions',
         registraions: 'webusers/registrations'
       }
   devise_scope :webuser do
     get '/webusers/login', to: 'webusers/sessions#new'
+    get '/webusers/signup', to: 'webusers/registrations#new'
   end
 
 

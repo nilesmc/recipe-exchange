@@ -2,14 +2,12 @@
   .row
     h1 Get in touch with like-minded people
     h3 Create, exchange, cook together
-    .col-sm-6.col-sm-offset-3
-      h2.text-center Sign up
+    .col-sm-4.col-sm-offset-4
+      h3.text-center Sign up
       = bootstrap_form_for(resource, as: resource_name, url: webuser_registration_path) do |f|
-        = f.error_notification
-        .form-inputs
-          = f.text_field :name, placeholder: 'username (will be shown publicly)', class: 'form-control'
-          = f.text_field :email, placeholder: 'email', class: 'form-control'
-          = f.password_field :password, placeholder: 'password', class: 'form-control'
-          = f.password_field :password_confirmation, placeholder: 'password confirmation', class: 'form-control'
-          = f.submit 'Sign up', class: 'btn sign-up-button'
+        = f.text_field :name, placeholder: 'username (will be shown publicly)', class: 'form-control'
+        = f.text_field :email, placeholder: 'email', class: 'form-control'
+        = f.password_field :password, placeholder: 'password', class: 'form-control'
+        = f.password_field :password_confirmation, placeholder: 'password confirmation', class: 'form-control'
+        = f.submit 'Sign up', class: 'btn sign-up-button'
       = render "webusers/shared/links"
