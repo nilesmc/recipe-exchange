@@ -25,13 +25,10 @@ Install FAE - Rails CMS engine
 rails g fae:install
 ```
 
-
 Then seed the users for FAE
 ```
 rails fae:seed_db
 ```
-
-
 
 Steps I used to create application:
 
@@ -41,7 +38,11 @@ rails generate devise Webser
 rails db:migrate
 ```
 
-Next I had to
+Next I had to customize Devise to get it to play nicely with FAE and the needs of the application to have its own web user sign up process. This will be an area that will be addressed more deeply when the user management is spun out into its own services.
+
+see ApplicationDeviseController and devise.rb for more of the changes.
+
+
 
 ## Process
 
