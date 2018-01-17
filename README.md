@@ -42,6 +42,9 @@ Next I had to customize Devise to get it to play nicely with FAE and the needs o
 
 see ApplicationDeviseController and devise.rb for more of the changes.
 
+Converted default devise from erb to slim
+
+Layered on some bootsrap goodness
 
 
 ## Process
