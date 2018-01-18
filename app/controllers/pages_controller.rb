@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   include ApplicationHelper
+
   def home
     @page = "Hello World"
   end

@@ -1,7 +1,7 @@
 # Core stuff
 gem 'rails', '~> 5.1.4'
 gem 'pg'
-gem 'thin'
+gem 'puma'
 
 # CMS stuff
 gem 'fae-rails'

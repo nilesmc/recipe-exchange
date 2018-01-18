@@ -8,6 +8,11 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 
+# require 'database_cleaner'
+# require 'pry'
+
+# Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
+
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
 # run as spec files by default. This means that files in spec/support that end
@@ -56,6 +61,27 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
+  config.before(:suite) do
+    DatabaseCleaner.clean_with(:truncation)
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.strategy = :transaction
+  end
+
+  config.before(:each, :js => true) do
+    DatabaseCleaner.strategy = :truncation
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
+
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
+
+
   require 'capybara/poltergeist'
   require 'factory_girl_rails'
   require 'capybara/rspec'
@@ -65,6 +91,7 @@ RSpec.configure do |config|
   # This configuration allows to use factory_girl gem’s methods
   config.include FactoryGirl::Syntax::Methods
   # Those two configurations are required in order to be able to test JavaScript with capybara
+
   Capybara.default_max_wait_time = 10
   Capybara.javascript_driver = :poltergeist
   Capybara.server = :puma
