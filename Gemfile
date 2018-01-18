@@ -41,8 +41,16 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   gem 'pry'
   gem 'rb-readline'
-  gem 'capybara', '~> 2.13'
-  gem 'selenium-webdriver'
+end
+
+group :test do
+  gem 'rspec-rails', '~> 3.6'
+  gem 'factory_girl_rails'
+  gem 'rails-controller-testing'
+  gem 'headless'
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'database_cleaner'
 end
 
 group :development do
