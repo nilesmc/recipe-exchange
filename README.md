@@ -46,11 +46,10 @@ Converted default devise from erb to slim
 
 Layered on some bootstrap goodness
 
-Next up
+Added in navigation for login
 
-* add in navigation for login
-* setup testing
-* add in recipes
+Setup testing suite with rspec
+
 
 
 ## Process
