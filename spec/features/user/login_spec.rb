@@ -10,9 +10,7 @@ RSpec.feature "Login", :type => :feature do
     fill_in 'webuser[email]', with: webuser.email
     fill_in 'webuser[password]', with: webuser.password
     find('.login-button').click
-    require 'pry'
-    binding.pry
-    expect(page).to have_selector('#webuser-settings')
+    expect(page).to have_selector('#user-settings')
   end
 
 end
