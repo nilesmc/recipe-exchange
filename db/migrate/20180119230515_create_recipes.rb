@@ -1,9 +1,9 @@
 class CreateRecipes < ActiveRecord::Migration[5.1]
   def change
     create_table :recipes do |t|
-      t.integer :webuser_id
-      t.integer :category_id
-      t.string :title
+      t.integer :webuser_id, index: true
+      t.integer :category_id, index: true
+      t.string :title, index: true
       t.string :people_it_feeds
       t.text :description
       t.text :ingredients

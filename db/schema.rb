@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20180119230631) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["title"], name: "index_categories_on_title"
   end
 
   create_table "fae_changes", id: :serial, force: :cascade do |t|
@@ -180,6 +181,9 @@ ActiveRecord::Schema.define(version: 20180119230631) do
     t.text "instructions"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_recipes_on_category_id"
+    t.index ["title"], name: "index_recipes_on_title"
+    t.index ["webuser_id"], name: "index_recipes_on_webuser_id"
   end
 
   create_table "webusers", force: :cascade do |t|
