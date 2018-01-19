@@ -1,0 +1,14 @@
+= simple_form_for(['admin', @item]) do |f|
+  header.content-header.js-content-header
+    == render 'fae/shared/form_header', header: @klass_name
+  == render 'fae/shared/errors'
+
+  main.content
+    = fae_input f, :title
+    = fae_input f, :people_it_feeds, helper_text: 'Range or Number of People Recipe Feeds'
+    = fae_input f, :description, markdown: true
+    = fae_input f, :ingredients, markdown: true
+    = fae_input f, :instructions, markdown: true
+
+    = fae_association f, :webuser, collection: Webuser.all
+    = fae_association f, :category

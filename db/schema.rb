@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180116230651) do
+ActiveRecord::Schema.define(version: 20180119230515) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -161,6 +161,18 @@ ActiveRecord::Schema.define(version: 20180116230651) do
     t.index ["reset_password_token"], name: "index_fae_users_on_reset_password_token", unique: true
     t.index ["role_id"], name: "index_fae_users_on_role_id"
     t.index ["unlock_token"], name: "index_fae_users_on_unlock_token", unique: true
+  end
+
+  create_table "recipes", force: :cascade do |t|
+    t.integer "webuser_id"
+    t.integer "category_id"
+    t.string "title"
+    t.string "people_it_feeds"
+    t.text "description"
+    t.text "ingredients"
+    t.text "instructions"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "webusers", force: :cascade do |t|

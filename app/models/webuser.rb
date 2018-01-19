@@ -4,4 +4,8 @@ class Webuser < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  def for_fae_index
+    order(:name)
+  end
+
 end

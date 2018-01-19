@@ -9,8 +9,9 @@ Rails.application.routes.draw do
     get '/webusers/signup', to: 'webusers/registrations#new', as: 'signup'
   end
 
-
   namespace :admin do
+    resources :categories
+    resources :recipes
 
   end
   # mount Fae below your admin namespec
