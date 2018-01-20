@@ -1,7 +1,7 @@
 class Category < ApplicationRecord
   include Fae::BaseModelConcern
 
-  has_many: recipes
+  has_many :recipes
 
   validates :title, presence: true
 

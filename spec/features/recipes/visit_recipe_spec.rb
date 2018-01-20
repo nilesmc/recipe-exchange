@@ -2,9 +2,10 @@ require "rails_helper"
 
 RSpec.feature "Visit single recipe", :type => :feature do
   let(:webuser) { create(:webuser) }
-  let(:recipe) { create(:recipe) }
+  let(:category) { create(:category) }
+  let(:recipe) { create(:recipe, webuser: webuser, category: category) }
 
-  scenario "User goes to a single recipe from the home page", js: true do
+  scenario "When a webuser goes to a single recipe from the home page", js: true do
     recipe
     visit root_path
     page.find(".single-recipe-card").click

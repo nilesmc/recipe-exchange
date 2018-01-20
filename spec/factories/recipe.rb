@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :recipe do
-    user
+    webuser
     category
     sequence(:title) { |n| "some title #{n}" }
     sequence(:slug) { |n| "some-slug-#{n}" }
