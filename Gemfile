@@ -41,6 +41,7 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   gem 'pry'
   gem 'rb-readline'
+  gem 'faker'
 end
 
 group :test do
