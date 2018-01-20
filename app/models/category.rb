@@ -1,6 +1,8 @@
 class Category < ApplicationRecord
   include Fae::BaseModelConcern
 
+  validates :title, presence: true
+
   def fae_display_field
     title
   end

@@ -4,5 +4,6 @@
   == render 'fae/shared/errors'
 
   main.content
-    = fae_input f, :title
+    = fae_input f, :title, input_class: 'slugger'
+    = fae_input f, :slug
     = fae_input f, :description

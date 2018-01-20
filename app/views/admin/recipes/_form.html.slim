@@ -4,7 +4,8 @@
   == render 'fae/shared/errors'
 
   main.content
-    = fae_input f, :title
+    = fae_input f, :title, input_class: 'slugger'
+    = fae_input f, :slug
     = fae_input f, :people_it_feeds, helper_text: 'Range or Number of People Recipe Feeds'
     = fae_input f, :description, markdown: true
     = fae_input f, :ingredients, markdown: true

@@ -4,6 +4,7 @@ class CreateRecipes < ActiveRecord::Migration[5.1]
       t.integer :webuser_id, index: true
       t.integer :category_id, index: true
       t.string :title, index: true
+      t.string :slug, index: true
       t.string :people_it_feeds
       t.text :description
       t.text :ingredients

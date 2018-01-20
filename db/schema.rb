@@ -17,9 +17,11 @@ ActiveRecord::Schema.define(version: 20180119230631) do
 
   create_table "categories", force: :cascade do |t|
     t.string "title"
+    t.string "slug"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_categories_on_slug"
     t.index ["title"], name: "index_categories_on_title"
   end
 
@@ -175,6 +177,7 @@ ActiveRecord::Schema.define(version: 20180119230631) do
     t.integer "webuser_id"
     t.integer "category_id"
     t.string "title"
+    t.string "slug"
     t.string "people_it_feeds"
     t.text "description"
     t.text "ingredients"
@@ -182,6 +185,7 @@ ActiveRecord::Schema.define(version: 20180119230631) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_recipes_on_category_id"
+    t.index ["slug"], name: "index_recipes_on_slug"
     t.index ["title"], name: "index_recipes_on_title"
     t.index ["webuser_id"], name: "index_recipes_on_webuser_id"
   end
