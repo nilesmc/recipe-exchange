@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Recipe do
+RSpec.describe Recipe, type: :model do
 
   it 'by_category scope gets recipes by particular category' do
     category = create(:category)
