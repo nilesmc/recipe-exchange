@@ -35,7 +35,7 @@ def seed_recipes
       title = Faker::Lorem.sentences[0]
       Recipe.create(
         title: title,
-        slug:  title.downcase.strip.gsub(' ', '-'),
+        slug:  title.parameterize,
         description: Faker::Lorem.sentences[0],
         ingredients: Faker::Lorem.sentences[0],
         instructions: Faker::Lorem.sentences[0],
