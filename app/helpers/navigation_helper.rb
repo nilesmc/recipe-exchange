@@ -8,4 +8,16 @@ module NavigationHelper
     end
   end
 
+  def body_class
+    class_array = [controller_name, action_name]
+
+    if @body_class.present?
+      @body_class
+    elsif @body_class_piece.present?
+      class_array.push(@body_class_pieces).join(' ')
+    else
+      class_array.join(' ')
+    end
+  end
+
 end
