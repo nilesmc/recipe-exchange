@@ -23,7 +23,7 @@ def seed_categories
   cats = ['breakfast', 'brunch', 'lunch', 'dinner', 'snacks']
 
   cats.each do |title|
-    Category.create(title: title)
+    Category.create(title: title, slug: title)
   end
 end
 
@@ -32,8 +32,10 @@ def seed_recipes
 
   categories.each do |category|
     5.times do
+      title = Faker::Lorem.sentences[0]
       Recipe.create(
-        title: Faker::Lorem.sentences[0],
+        title: title,
+        slug:  title.downcase.strip.gsub(' ', '-'),
         description: Faker::Lorem.sentences[0],
         ingredients: Faker::Lorem.sentences[0],
         instructions: Faker::Lorem.sentences[0],

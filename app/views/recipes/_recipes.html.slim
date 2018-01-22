@@ -1,0 +1,15 @@
+- recipe ||= nil
+
+- if recipe.present?
+  .col-sm-3.single-recipe-card id="#{recipes_detail_path(recipe.id)}"
+    .card
+      .card-block
+        h4.recipe-text
+          = truncate(recipe.title, :length => 60)
+        .recipe-content
+          .posted-by
+            | Posted by #{recipe.webuser.name}
+          h3= recipe.title
+          h4= recipe.category.title
+          p= recipe.description
+          = link_to "I'm interested", recipes_detail_path(recipe.id), class: 'interested'

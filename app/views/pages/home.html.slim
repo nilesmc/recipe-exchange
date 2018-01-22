@@ -5,3 +5,8 @@
     #main-content
       - if @page.present?
         h2 = @page
+
+      - if @items.present?
+        h1 Check out Some Recent Recipes
+        - @items.each do |recipe|
+          == render 'recipes/recipes', recipe: recipe

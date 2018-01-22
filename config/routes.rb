@@ -19,6 +19,10 @@ Rails.application.routes.draw do
 
   root :to => 'pages#home'
 
+  get '/recipes', to: "recipes#index", as: 'recipes_index'
+  get '/recipes/:slug', to: "recipes#detail", as: 'recipes_detail'
+
+
   get '/site-map', to: "about#index", as: 'about_index'
 
 

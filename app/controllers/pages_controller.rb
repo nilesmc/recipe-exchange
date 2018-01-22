@@ -2,7 +2,8 @@ class PagesController < ApplicationController
   include ApplicationHelper
 
   def home
-    @page = "Hello World"
+    @page = "Welcome to the Recipe Exchange"
+    @items = Recipe.limit(5)
   end
 
   def error404
