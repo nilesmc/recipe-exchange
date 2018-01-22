@@ -22,9 +22,13 @@
 // Default styles
 @import "base/default";
 
+// Global styles
+@import "globals/markdown";
+
 // Partials - main css files
 @import "partials/*";
 @import "partials/layout/*";
+@import "partials/recipes/*";
 
 // Media queries for a responsive design
 @import "responsive/*";

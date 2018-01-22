@@ -5,6 +5,6 @@
         | Posted by #{@item.webuser.name}
       h3= @item.title
       p= @item.category.title
-      p= @item.description
-      p= @item.ingredients
-      p= @item.instructions
+      = markdown(@item.description)
+      = markdown(@item.ingredients)
+      = markdown(@item.instructions)
